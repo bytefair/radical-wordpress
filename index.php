@@ -12,8 +12,14 @@
         <div id="page" class="site-wrapper">
             <header id="masthead" class="site-header">
                 <hgroup>
-                    <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                    <h1 class="site-title">
+                        <a href="<?php echo home_url( '/' ); ?>">
+                            <?php bloginfo( 'name' ); ?>
+                        </a>
+                    </h1>
+                    <h2 class="site-description">
+                        <?php bloginfo( 'description' ); ?>
+                    </h2>
                 </hgroup>
             </header><!-- #masthead .site-header -->
 
@@ -25,7 +31,9 @@
                         <!-- your content codes go here -->
                     <?php endwhile; ?>
                 <?php else : ?>
-                    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                    <p>
+                        <?php _e('Sorry, no posts matched your criteria.'); ?>
+                    </p>
                 <?php endif; ?>
 
                 </div><!-- #content -->
