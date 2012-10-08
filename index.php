@@ -6,10 +6,11 @@
             wp_title( '-', true, 'right' );
             bloginfo( 'name' );
         ?></title>
-        <link rel="stylesheet" href=“style.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="site-wrapper">
+
             <header id="masthead" class="site-header">
                 <hgroup>
                     <h1 class="site-title">
@@ -25,7 +26,6 @@
 
             <div id="primary" class="site-content">
                 <div id="content">
-
                 <?php if ( have_posts() ) : ?>
                     <?php while ( have_posts() ) : the_post(); ?>
                         <!-- your content codes go here -->
@@ -35,9 +35,9 @@
                         <?php _e('Sorry, no posts matched your criteria.'); ?>
                     </p>
                 <?php endif; ?>
-
                 </div><!-- #content -->
             </div><!-- #primary .site-content -->
+
         </div>
     </body>
 </html>
