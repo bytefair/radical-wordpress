@@ -6,7 +6,9 @@
             wp_title( '-', true, 'right' );
             bloginfo( 'name' );
         ?></title>
+        <?php wp_enqueue_script( 'jquery' ); ?>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
+        <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="site-wrapper">
