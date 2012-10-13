@@ -1,6 +1,13 @@
 <?php
 
 function script_loader() {
+    //use Modernizr, remember this needs to be loaded in head
+    wp_enqueue_script(
+        'modernizr',
+        get_template_directory_uri().'/js/modernizr-2.6.2.js',
+        array(),
+        '2.6.2' );
+
     //use local development jquery, use CDN for production
     wp_deregister_script( 'jquery' );
     wp_register_script(
