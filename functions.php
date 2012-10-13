@@ -1,4 +1,6 @@
 <?php
+
+function script_loader() {
     //use local development jquery, use CDN for production
     wp_deregister_script( 'jquery' );
     wp_register_script(
@@ -8,4 +10,7 @@
         '1.8.2',
         true );
     wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'script_loader' );
+
 ?>
