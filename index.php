@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" <?php language_attributes(); ?>>
     <head>
-        <meta charset="utf-8">
-        <title><?php
-            wp_title( '-', true, 'right' );
-            bloginfo( 'name' );
-        ?></title>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <title><?php wp_title( '-', true, 'right' ); ?></title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
