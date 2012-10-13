@@ -23,5 +23,6 @@ add_action( 'wp_enqueue_scripts', 'script_loader' );
 function style_loader() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
+add_action( 'wp_enqueue_scripts', 'style_loader');
 
 ?>
