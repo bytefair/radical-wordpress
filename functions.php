@@ -5,7 +5,7 @@ function script_loader() {
     wp_enqueue_script(
         'modernizr',
         get_template_directory_uri().'/js/modernizr-2.6.2.js',
-        array(),
+        false,
         '2.6.2' );
 
     //use local development jquery, use CDN for production
@@ -13,7 +13,7 @@ function script_loader() {
     wp_register_script(
         'jquery',
         get_template_directory_uri().'/js/jquery-1.8.2.js',
-        array(),
+        false,
         '1.8.2',
         true );
     wp_enqueue_script( 'jquery' );
